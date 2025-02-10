@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushka Chougule</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Typing Effect for the Tagline
+      const text = "Aspiring Data Analyst, ML Engineer & AI Researcher";
+      const speed = 50;
+      let i = 0;
+  
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("typing-text").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          document.querySelector(".cursor").style.display = "none";
+        }
+      }
+      typeWriter();
+    });
+</script>
+  
+<body>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-container">
+            <div class="banner-content">
+                <h1>Hey there, I'm Anushka!</h1>
+                <h2 class="tagline"><span id="typing-text"></span><span class="cursor">|</span></h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <section class="section-container about-section" id="about">
+        <div class="about-container">
+            <h2>About Me 👋</h2>
+            <p>
+                Passionate about data, I love uncovering insights, solving complex problems, and driving real-world impact with analytics and machine learning.
+            </p>
+            <p>
+                Currently pursuing my Master’s in Information Management at the University of Maryland, I also mentor students as a Teaching Assistant while working on impactful data-driven projects.
+            </p>
+
+            <!-- Buttons for Resume & Opportunities -->
+            <div class="about-buttons">
+                <a href="files/Anushka_Chougule_Resume.pdf" target="_blank" class="btn resume-btn">📄 View My Resume</a>
+                <a href="mailto:anushka7@umd.edu" class="btn contact-btn">💼 Open for Opportunities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section-container education-section" id="education">
+        <h3>Education 🎓</h3>
+        <div class="timeline">
+            <div class="timeline-event">
+                <div class="timeline-date">2023 - 2025</div>
+                <div class="timeline-content">
+                    <h4>University of Maryland, College Park</h4>
+                    <p>Master of Information Management - Data Science & Analytics</p>
+                    <p><strong>GPA:</strong> 4.0/4.0</p>
+                </div>
+            </div>
+
+            <div class="timeline-event">
+                <div class="timeline-date">2018 - 2022</div>
+                <div class="timeline-content">
+                    <h4>Savitribai Phule Pune University</h4>
+                    <p>Bachelor of Engineering in Computer Engineering</p>
+                    <p><strong>GPA:</strong> 3.9/4.0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section class="section-container project-section" id="projects">
+    <h3>Projects 🚀</h3>
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h4>Fintech Loan Data Analysis</h4>
+            <p>Built an AWS-powered data pipeline to analyze $2.5B+ in loans, uncovering top borrowing states, loan purposes, and customer segments.</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h4>Fraud Detection & Customer Profiling</h4>
+            <p>Developed a machine learning model that achieved a 99.7% ROC-AUC score in fraud detection while segmenting customers for better insights.</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h4>Hotel Booking Data Analysis</h4>
+            <p>Performed an exploratory analysis on 119,390 hotel bookings, uncovering trends in cancellations, guest demographics, and revenue impact.</p>
+            <a href="https://github.com/anushkachougule/Exploratory-Data-Analysis-Hotel-Booking-Demand-Dataset" class="project-link">View Project</a>
+        </div>
+
+        <!-- New Project: Grand Prix Explorer -->
+        <div class="project-card">
+            <h4>Grand Prix Explorer 🏎️</h4>
+            <p>An interactive Formula 1 data visualization dashboard that provides insights into race history, driver stats, and team performance.</p>
+
+            <!-- Video Demo -->
+            <div class="video-demo">
+                <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_LINK" target="_blank">
+                    <img src="img/youtube-thumbnail.jpg" alt="Grand Prix Explorer Demo">
+                </a>
+            </div>
+
+            <!-- Screenshot Gallery -->
+            <div class="project-gallery">
+                <img src="img/screenshot1.jpg" alt="Dashboard Preview">
+                <img src="img/screenshot2.jpg" alt="Race Insights">
+            </div>
+
+            <!-- Project Links -->
+            <div class="project-links">
+                <a href="https://github.com/anushkachougule/Grand-Prix-Explorer" class="project-link" target="_blank">GitHub Repo</a>
+                <a href="https://your-dashboard-link.com" class="project-link" target="_blank">Live Dashboard</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+   <!-- Skills Section -->
+<section class="section-container skills-container" id="skills">
+    <h3>Skills 💡</h3>
+    <div class="skills-container">
+        
+        <div class="skill-category">
+            <h4>Programming</h4>
+            <div class="skill-list">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">R</span>
+                <span class="skill-badge">C++</span>
+                <span class="skill-badge">Java</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h4>Data Science</h4>
+            <div class="skill-list">
+                <span class="skill-badge">Machine Learning</span>
+                <span class="skill-badge">AI</span>
+                <span class="skill-badge">Deep Learning</span>
+                <span class="skill-badge">Feature Engineering</span>
+                <span class="skill-badge">Statistical Modeling</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h4>Big Data & Cloud</h4>
+            <div class="skill-list">
+                <span class="skill-badge">AWS</span>
+                <span class="skill-badge">GCP</span>
+                <span class="skill-badge">BigQuery</span>
+                <span class="skill-badge">Spark</span>
+                <span class="skill-badge">Airflow</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h4>Visualization & BI</h4>
+            <div class="skill-list">
+                <span class="skill-badge">Tableau</span>
+                <span class="skill-badge">Power BI</span>
+                <span class="skill-badge">D3.js</span>
+                <span class="skill-badge">Matplotlib</span>
+                <span class="skill-badge">Seaborn</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section class="section-container contact-section" id="contact">
+        <h3>Get in Touch 📬</h3>
+        <p class="contact-text">Feel free to reach out for collaborations, opportunities, or just to connect!</p>
+        
+        <div class="contact-container">
+            <div class="contact-card">
+                <a href="mailto:anushka7@umd.edu">
+                    <img src="images/email_icon.png" alt="Email">
+                    <p>Email</p>
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <a href="https://linkedin.com/in/anushkachougule" target="_blank">
+                    <img src="images/linkedin_icon.png" alt="LinkedIn">
+                    <p>LinkedIn</p>
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <a href="https://github.com/anushkachougule" target="_blank">
+                    <img src="images/github_icon.png" alt="GitHub">
+                    <p>GitHub</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p class="copyright">© 2025 Anushka Chougule</p>
+    </footer>
+
+</body>
+</html>

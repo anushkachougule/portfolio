@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  
+}
+/* Overlay for Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Adjust darkness */
+    z-index: -1;
+}
+
+/* Add Background Image to the Entire Webpage */
+body {
+  font-family: var(--font-primary);
+  background-image: url('bg_image.jpg'); 
+  background-size: cover;  
+  background-position: center; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
+  color: var(--darkCharcoal-color);
+}
+
+:root {
+  /* Fonts */
+  --font-primary: "Space Grotesk", sans-serif;
+  --font-secondary: "Mulish", sans-serif;
+
+  /* Colors */
+  --blue-color: #242f65;
+  --orange-color: #ff774c;
+  --gunMetal-color: #525665;
+  --darkCharcoal-color: #2f2f2f;
+  --mintGreen-color: #7390f9; /* Removed extra `#` */
+}
+/* Container for Each Section */
+.section-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.9); /* Light semi-transparent background */
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjusting Specific Sections */
+.banner {
+  background: rgba(255, 255, 255, 0.9); /* Making it slightly more visible */
+  padding: 60px 0;
+  border-radius: 15px;
+}
+
+.projects, .skills, .contact, .about {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+}
+
+/* Banner Section */
+.banner {
+  border-radius: 25px;
+  min-height: 20vh;
+  margin: 20px 4%;
+  background-color: transparent;
+  display: flex;
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+  text-align: center; /* Centers text inside */
+  flex-direction: column; /* Stacks elements vertically */
+  padding: 10px;
+}
+
+/* Banner Container (Ensures Inner Content is Centered) */
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Banner Content */
+.banner-content {
+  max-width: 75%;
+}
+
+/* Banner Headline */
+.banner-content h1 {
+  font-family: var(--font-primary);
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Banner Text */
+.banner-content p {
+  font-family: var(--font-secondary);
+  color: var(--blue-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 80%;
+  margin: 0 auto 20px auto; /* Centers the paragraph */
+}
+
+/* Tagline */
+.tagline {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  text-align: center;
+  
+  padding: 5px 0;
+  position: relative;
+  
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center; 
+  gap: 0px; /* Adds space between each button */
+  list-style: none;
+  padding: 0;
+  
+
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+/* Navbar Links as Buttons */
+.navbar ul li a {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9); /* Explicitly set text color */
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 0px;
+  /*border: 2px solid var(--blue-color); */
+  background: transparent;
+  letter-spacing: 1.2px;
+  display: inline-block; /* Ensures transform works */
+  transition: transform 0.2s ease-in-out;
+  transform-origin: center; /* Makes sure scaling happens evenly */
+}
+
+/* Hover Effect: Text Enlarges */
+.navbar ul li a:hover {
+  background: rgba(115, 144, 249, 0.2); /* Subtle highlight effect */
+  text-decoration: underline; /* Underline text on hover */
+  color: var(--blue-color); /* Ensures text color remains consistent */
+  transition: background 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+  padding: 60px 0;
+  background: white;
+  
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+.about-container h2 {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-color);
+  margin-bottom: 15px;
+}
+
+.about-container p {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gunMetal-color);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* About Buttons */
+.about-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Resume & Opportunities Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.resume-btn {
+  background: white ;
+  font-family: var(--font-secondary);
+  color: var(--blue-color); 
+  border-color:var(--blue-color);
+  text-decoration: underline;
+}
+
+.resume-btn:hover {
+  background: rgba(115, 144, 249, 0.2); /* Subtle highlight effect */
+  color: var(--blue-color); /* Ensures text color remains consistent */
+  transition: background 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+
+}
+
+.contact-btn {
+  background: white ;
+  font-family: var(--font-secondary);
+  color: var(--blue-color); 
+  border-color:var(--blue-color);
+  text-decoration: underline;
+}
+
+.contact-btn:hover {
+  background: rgba(115, 144, 249, 0.2); /* Subtle highlight effect */
+  color: var(--blue-color); /* Ensures text color remains consistent */
+  transition: background 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+
+/* Education Section */
+.education {
+  text-align: center;
+  padding: 40px 0;
+  background-color: white;
+}
+
+.education h3 {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-color);
+  margin-bottom: 30px;
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--blue-color);
+}
+
+/* Timeline Event */
+.timeline-event {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 50px;
+}
+
+/* Left Side (Date) */
+.timeline-date {
+  font-family: var(--font-secondary);
+  
+  text-align: left;
+  font-weight: 600;
+  color: var(--blue-color);
+  width: 120px; /* Fixed width for proper alignment */
+  font-size: 16px;
+  padding-right: 0px; /* Space between date and line */
+}
+
+/* Right Side (Content) */
+.timeline-content {
+  flex: 1;
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  text-align: left;
+  background: white;
+  color: var(--gunMetal-color);
+  padding: 15px;
+  border-radius: 8px;
+  margin-left: 10px; /* Push content away from the timeline */
+}
+
+/* Circular Indicator */
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--blue-color);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* Experience Section */
+.experience {
+  text-align: center;
+  padding: 40px 0;
+  background-color: white;
+}
+
+.experience h3 {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-color);
+  margin-bottom: 30px;
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+  padding: 50px 0;
+  background-color: white;
+}
+
+.projects h3 {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-color);
+  margin-bottom: 30px;
+}
+
+/* Project Grid Layout */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Project Title */
+.project-card h4 {
+  font-family: var(--font-primary);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--blue-color);
+  margin-bottom: 10px;
+}
+
+/* Project Description */
+.project-card p {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  color: var(--gunMetal-color);
+  line-height: 1.5;
+}
+
+/* Project Button */
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--blue-color);
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid var(--blue-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-link:hover {
+  background: var(--blue-color);
+  color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Stack projects on smaller screens */
+  }
+}
+
+/* Project Gallery (Screenshots) */
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.project-gallery img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Video Demo Thumbnail */
+.video-demo {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.video-demo img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-demo img:hover {
+  transform: scale(1.05);
+}
+
+/* Project Links */
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-link {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 2px solid var(--blue-color);
+  color: var(--blue-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-link:hover {
+  background: var(--blue-color);
+  color: white;
+}
+
+
+/* Skills Section */
+.skills {
+  text-align: center;
+  padding: 50px 0;
+  background-color: white;
+}
+
+.skills h3 {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-color);
+  margin-bottom: 30px;
+}
+
+/* Skills Grid */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Skill Category */
+.skill-category {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 280px;
+}
+
+/* Skill Category Title */
+.skill-category h4 {
+  font-family: var(--font-primary);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--blue-color);
+  margin-bottom: 15px;
+}
+
+/* Skill List */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Skill Badges */
+.skill-badge {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue-color);
+  background: rgba(115, 144, 249, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.skill-badge:hover {
+  background: var(--blue-color);
+  color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-category {
+    width: 90%;
+  }
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 50px 0;
+  background-color: white;
+}
+
+.contact h3 {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-color);
+  margin-bottom: 15px;
+}
+
+.contact-text {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gunMetal-color);
+  margin-bottom: 30px;
+}
+
+/* Contact Card Container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Contact Cards */
+.contact-card {
+  font-family: var(--font-secondary);
+  background: white;
+  padding: 20px;
+
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 120px;
+}
+
+/* Contact Card Links */
+.contact-card a {
+  text-decoration: none;
+  color: var(--blue-color);
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contact Icons */
+.contact-card img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.contact-card:hover img {
+  transform: scale(1.2);
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* Footer Section */
+#footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: transparent; /* Keeps it aligned with the theme */
+  color: white;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline {
+    max-width: 100%;
+    padding-left: 10px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-event {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .timeline-date {
+    text-align: left;
+    width: 100%;
+  }
+
+  .timeline-event::before {
+    left: 8px;
+  }
+
+  .timeline-content {
+    margin-left: 10px;
+  }
+}
